@@ -1,8 +1,3 @@
-# Data and Code for Transversely Irradiated Liquid Microjets
-
-Version 1.0.0, assembled November 17, 2026, corresponding to manuscript V38.
-This is a local deposit-ready folder, not an uploaded or published repository.
-
 **Paper:** Cheng Xu, Wangxinmao Yu, Yibo Zhao, Tianqi Zhai, Xinyan Zhao, and
 Weiwei Deng, *Cavitation and bilateral ejection from transversely irradiated
 liquid microjets*. Target journal: *Physical Review Fluids*; manuscript year:
