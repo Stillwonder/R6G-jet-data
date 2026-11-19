@@ -3,7 +3,7 @@ Weiwei Deng, *Cavitation and bilateral ejection from transversely irradiated
 liquid microjets*. Target journal: *Physical Review Fluids*; manuscript year:
 2026. The paper is not identified here as an accepted or published article.
 **Paper DOI:** not assigned; replace this placeholder after publication.
-**Dataset DOI:** not assigned; add the repository DOI after deposit.
+**Dataset DOI:** 10.5281/zenodo.24359532
 
 **Contacts:** Xinyan Zhao, <zhaoxy@sustech.edu.cn>; Weiwei Deng,
 <dengww@sustech.edu.cn>. Authors and order follow V38.
@@ -251,8 +251,7 @@ not redistributed in this folder. When reusing, cite the authors, this dataset
 version, and the paper/repository DOI once assigned; describe modifications.
 
 Before a public GitHub/Zenodo/Figshare deposit, the authors should confirm
-coauthor permission and image/data rights, replace DOI placeholders when
-available, and check that the deposit license selections match these files.
+coauthor permission and image/data rights, 10.5281/zenodo.24359532, and check that the deposit license selections match these files.
 This preparation performs no upload, publication, or contact with third parties.
 
 ## Field Dictionary
