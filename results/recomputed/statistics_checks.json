@@ -1,0 +1,14 @@
+{
+  "frames": 3027,
+  "conditions": 32,
+  "seed": 20261115,
+  "resamples": 2000,
+  "rng": "NumPy default_rng / PCG64",
+  "max_abs_PC1_error": 0.0,
+  "max_abs_refit_loading_error": 5.828670879282072e-15,
+  "max_abs_SVD_loading_error": 0.0,
+  "explained_variance_fraction_refit": 0.8582476499250882,
+  "explained_variance_fraction_SVD": 0.8582476499250866,
+  "eigenpair_residual_l2": 2.7086711606655342e-14,
+  "draw_order": "condition_order; within each: S, PC1, Ba, Bl"
+}

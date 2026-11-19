@@ -1,0 +1,92 @@
+{
+  "frames": 3027,
+  "conditions": 32,
+  "seed": 20261115,
+  "resamples": 2000,
+  "rng": "NumPy default_rng / PCG64",
+  "max_abs_PC1_error": 0.0,
+  "max_abs_refit_loading_error": 5.828670879282072e-15,
+  "max_abs_SVD_loading_error": 0.0,
+  "explained_variance_fraction_refit": 0.8582476499250882,
+  "explained_variance_fraction_SVD": 0.8582476499250866,
+  "eigenpair_residual_l2": 2.7086711606655342e-14,
+  "draw_order": "condition_order; within each: S, PC1, Ba, Bl",
+  "all_frame_relations_checked": true,
+  "all_32_condition_statistics_reproduced": true,
+  "maximum_condition_errors": {
+    "condition_order": 0.0,
+    "concentration_molL": 0.0,
+    "energy_mJ": 0.0,
+    "laser_voltage_V": 0.0,
+    "delay_us": 0.0,
+    "n_frames": 0.0,
+    "n_active": 0.0,
+    "n_nonS0": 0.0,
+    "S_bar": 0.0,
+    "S_ci95_lower": 0.0,
+    "S_ci95_upper": 0.0,
+    "PC1_mean": 0.0,
+    "PC1_ci95_lower": 0.0,
+    "PC1_ci95_upper": 0.0,
+    "Ba_mean": 0.0,
+    "Ba_ci95_lower": 0.0,
+    "Ba_ci95_upper": 0.0,
+    "Bl_mean": 0.0,
+    "Bl_ci95_lower": 0.0,
+    "Bl_ci95_upper": 0.0,
+    "S0_count": 0.0,
+    "S0_fraction": 0.0,
+    "S1_count": 0.0,
+    "S1_fraction": 0.0,
+    "S2_count": 0.0,
+    "S2_fraction": 0.0,
+    "S3_count": 0.0,
+    "S3_fraction": 0.0,
+    "S4_count": 0.0,
+    "S4_fraction": 0.0,
+    "S5_count": 0.0,
+    "S5_fraction": 0.0,
+    "a_mean": 0.0,
+    "a_sd": 0.0,
+    "ell_um_mean": 0.0,
+    "ell_um_sd": 0.0,
+    "ns_mean": 0.0,
+    "ns_sd": 0.0,
+    "nc_mean": 0.0,
+    "nc_sd": 0.0
+  },
+  "examples": [
+    {
+      "state_label": "S0",
+      "raw_hash_verified": true,
+      "mask_and_features_reproduced": true
+    },
+    {
+      "state_label": "S1",
+      "raw_hash_verified": true,
+      "mask_and_features_reproduced": true
+    },
+    {
+      "state_label": "S2",
+      "raw_hash_verified": true,
+      "mask_and_features_reproduced": true
+    },
+    {
+      "state_label": "S3",
+      "raw_hash_verified": true,
+      "mask_and_features_reproduced": true
+    },
+    {
+      "state_label": "S4",
+      "raw_hash_verified": true,
+      "mask_and_features_reproduced": true
+    },
+    {
+      "state_label": "S5",
+      "raw_hash_verified": true,
+      "mask_and_features_reproduced": true
+    }
+  ],
+  "checksum_files_verified": 42,
+  "raw_data_scope": "Only six original frames are bundled; no full-3027-frame re-extraction is claimed."
+}

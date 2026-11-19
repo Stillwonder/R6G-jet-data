@@ -1,0 +1,45 @@
+cff-version: 1.2.0
+message: "Cite this dataset version and the corresponding manuscript; add DOI identifiers once assigned."
+type: dataset
+title: "Data and code for cavitation and bilateral ejection from transversely irradiated liquid microjets"
+version: 1.0.0
+authors:
+  - family-names: Xu
+    given-names: Cheng
+  - family-names: Yu
+    given-names: Wangxinmao
+  - family-names: Zhao
+    given-names: Yibo
+  - family-names: Zhai
+    given-names: Tianqi
+  - family-names: Zhao
+    given-names: Xinyan
+    email: zhaoxy@sustech.edu.cn
+  - family-names: Deng
+    given-names: Weiwei
+    email: dengww@sustech.edu.cn
+license: CC-BY-4.0
+abstract: >-
+  Processed fixed-delay survey statistics for 3027 frames and 32 conditions,
+  frozen PCA parameters, reproducible analysis and plotting scripts, and six
+  original representative frames. Code is separately licensed under MIT.
+  This local preparation corresponds to manuscript V38; a public repository
+  DOI and a paper DOI have not yet been assigned in this package.
+preferred-citation:
+  type: unpublished
+  title: "Cavitation and bilateral ejection from transversely irradiated liquid microjets"
+  year: 2026
+  notes: "Manuscript V38; target journal Physical Review Fluids; publication status and DOI must be updated by the authors."
+  authors:
+    - family-names: Xu
+      given-names: Cheng
+    - family-names: Yu
+      given-names: Wangxinmao
+    - family-names: Zhao
+      given-names: Yibo
+    - family-names: Zhai
+      given-names: Tianqi
+    - family-names: Zhao
+      given-names: Xinyan
+    - family-names: Deng
+      given-names: Weiwei

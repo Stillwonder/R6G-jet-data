@@ -1,0 +1,27 @@
+{
+  "version": "1.0.0",
+  "assembled_date": "2026-11-17",
+  "basis": "manuscript V38, not a published release",
+  "article_title": "Cavitation and bilateral ejection from transversely irradiated liquid microjets",
+  "target_journal": "Physical Review Fluids",
+  "article_DOI": null,
+  "public_repository_DOI": null,
+  "raw_frame_count_full_survey": 3027,
+  "bundled_raw_frame_count": 6,
+  "conditions": 32,
+  "state_labels": "All 3027 frames are manually annotated.",
+  "frame_timing": "15 us; author supplied, not EXIF-derived",
+  "concentration_precision": "Condition values use 10^(-folder exponent); earlier per-frame export rounded some concentrations.",
+  "table_join_key": [
+    "condition_id",
+    "frame_id"
+  ],
+  "blank_numeric_values": "undefined or ineligible, never interpreted as zero",
+  "excluded_from_this_lightweight_bundle": [
+    "remaining 3021 raw frames",
+    "time sequences in figures 4-6",
+    "three-dimensional acoustic arrays and full optical-source solver"
+  ],
+  "scope": "Processed experimental statistics and figure reproduction; not a full raw-data or simulation archive.",
+  "external_publication_or_upload": false
+}

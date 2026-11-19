@@ -1,0 +1,10 @@
+{
+  "python": "3.12.14",
+  "platform": "Windows",
+  "numpy": "2.5.4",
+  "Pillow": "13.0.0",
+  "matplotlib": "3.11.2",
+  "PCA_refit": "NumPy eigh and SVD; additional independent Wolfram eigenpair check retained by the authors",
+  "font_used_for_bundled_figures": "Times New Roman",
+  "strict_input_precision_retained": true
+}

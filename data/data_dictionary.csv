@@ -1,0 +1,98 @@
+file,column,type,unit,description
+data/per_frame.csv,row_index,integer,1,Original one-based frame-table order; preserve for exact finite-bootstrap replay.
+data/per_frame.csv,condition_id,string,1,Original concentration/voltage folder code; join with frame_id.
+data/per_frame.csv,concentration_molL,number,mol/L,"Exact condition-level dye concentration, 10^(-folder exponent)."
+data/per_frame.csv,energy_mJ,number,mJ,"Calibrated whole-beam incident pulse energy, not absorbed heat."
+data/per_frame.csv,laser_voltage_V,number,V,Laser calibration setting encoded in condition_id.
+data/per_frame.csv,frame_id,string,1,"Complete original filename, unique only within one condition."
+data/per_frame.csv,delay_us,number,us,"Programmed observation delay, 15 us for all survey shots; author-supplied."
+data/per_frame.csv,state_label,string,1,"Manually annotated image state S0, S1, S2, S3, S4, or S5."
+data/per_frame.csv,state_score,integer,1,Numeric score 0--5 corresponding to the manual state label.
+data/per_frame.csv,a,number,1,Count-derived exterior area fraction: exterior_area_px/(roi_width_px*roi_height_px).
+data/per_frame.csv,ell_um,number,um,Count-derived maximum single-sided span: ell_px times the fixed calibration.
+data/per_frame.csv,a_PCA_input,number,1,Archived export area fraction actually used by the frozen PCA; retains legacy rounding.
+data/per_frame.csv,ell_um_PCA_input,number,um,Archived export span actually used by the frozen PCA; retains legacy rounding.
+data/per_frame.csv,ns,integer,count,Number of active axial row-runs of at least two rows under the stored mask rules.
+data/per_frame.csv,nc,integer,count,"Visible four-neighbor components on the stride-4 exterior mask, each at least two sampled pixels."
+data/per_frame.csv,Ba,number or blank,1,Right exterior area/(left+right exterior area); blank for mask_active=0.
+data/per_frame.csv,Bl,number or blank,1,Right connected span/(left+right connected spans); blank for mask_active=0.
+data/per_frame.csv,PC1,number,1,"Frozen full-sample PCA projection of log1p(a_PCA_input,ell_um_PCA_input,ns,nc)."
+data/per_frame.csv,mask_active,integer,0/1,One when exterior_area_px>0; not equivalent to a non-S0 state label.
+data/per_frame.csv,area_left_px,integer,pixel count,Exterior-mask pixels strictly left of the estimated image axis (incident side).
+data/per_frame.csv,area_right_px,integer,pixel count,Exterior-mask pixels strictly right of the axis (transmitted side).
+data/per_frame.csv,span_left_px,integer,px,Maximum connected leftward distance from the estimated axis.
+data/per_frame.csv,span_right_px,integer,px,Maximum connected rightward distance from the estimated axis.
+data/per_frame.csv,ell_px,integer,px,"max(span_left_px,span_right_px), already a one-sided half-span."
+data/per_frame.csv,exterior_area_px,integer,pixel count,area_left_px+area_right_px under the original exterior mask.
+data/per_frame.csv,roi_width_px,integer,px,Width of the cropped jet-centered ROI used as the area-fraction denominator.
+data/per_frame.csv,roi_height_px,integer,px,ROI height after excluding the bottom 100 image rows.
+data/per_frame.csv,estimated_jet_center_px,integer,px,Estimated horizontal jet-axis coordinate in the full raw image.
+data/per_frame.csv,estimated_base_width_px,integer,px,Top-of-image jet-width estimate used by the masks; clipped to 8--80 px.
+data/per_frame.csv,threshold_contrast,number,grayscale levels,"clip(97th percentile of local background minus grayscale,30,65)."
+data/per_frame.csv,valid_jet_row_fraction,number,1,Fraction of ROI rows with an accepted dark run near the estimated axis.
+data/per_frame.csv,image_sha256,string,1,SHA-256 of the original full JPEG file for exact identity checks.
+data/per_frame.csv,raw_image_included,integer,0/1,One for the six full JPEG examples bundled in this deposit.
+data/per_frame.csv,example_path,string or blank,1,Repository-relative JPEG path for included examples; blank otherwise.
+data/per_condition.csv,condition_order,integer,1,One-based original condition-table order; fixes bootstrap RNG draw sequence.
+data/per_condition.csv,condition_id,string,1,Original concentration/voltage folder code; join with frame_id.
+data/per_condition.csv,concentration_molL,number,mol/L,"Exact condition-level dye concentration, 10^(-folder exponent)."
+data/per_condition.csv,energy_mJ,number,mJ,"Calibrated whole-beam incident pulse energy, not absorbed heat."
+data/per_condition.csv,laser_voltage_V,number,V,Laser calibration setting encoded in condition_id.
+data/per_condition.csv,delay_us,number,us,"Programmed observation delay, 15 us for all survey shots; author-supplied."
+data/per_condition.csv,n_frames,integer,count,Total independent survey shots used for state and PC1 means.
+data/per_condition.csv,n_active,integer,count,"Frames with exterior mask area>0, eligible for both Ba and Bl."
+data/per_condition.csv,n_nonS0,integer,count,"Frames with manually assigned state S1--S5, a separate criterion from n_active."
+data/per_condition.csv,S_bar,number,1,Arithmetic mean state_score over all condition frames.
+data/per_condition.csv,S_ci95_lower,number or blank,1,Lower 95% percentile bootstrap endpoint of the condition S mean; blank if no eligible values.
+data/per_condition.csv,S_ci95_upper,number or blank,1,Upper 95% percentile bootstrap endpoint of the condition S mean; blank if no eligible values.
+data/per_condition.csv,PC1_mean,number,1,"Mean frozen PC1 over all frames, without refitting PCA."
+data/per_condition.csv,PC1_ci95_lower,number or blank,1,Lower 95% percentile bootstrap endpoint of the condition PC1 mean; blank if no eligible values.
+data/per_condition.csv,PC1_ci95_upper,number or blank,1,Upper 95% percentile bootstrap endpoint of the condition PC1 mean; blank if no eligible values.
+data/per_condition.csv,Ba_mean,number or blank,1,"Mean of eligible per-frame Ba ratios, not a pooled-area ratio."
+data/per_condition.csv,Ba_ci95_lower,number or blank,1,Lower 95% percentile bootstrap endpoint of the condition Ba mean; blank if no eligible values.
+data/per_condition.csv,Ba_ci95_upper,number or blank,1,Upper 95% percentile bootstrap endpoint of the condition Ba mean; blank if no eligible values.
+data/per_condition.csv,Bl_mean,number or blank,1,"Mean of eligible per-frame Bl ratios, not a pooled-span ratio."
+data/per_condition.csv,Bl_ci95_lower,number or blank,1,Lower 95% percentile bootstrap endpoint of the condition Bl mean; blank if no eligible values.
+data/per_condition.csv,Bl_ci95_upper,number or blank,1,Upper 95% percentile bootstrap endpoint of the condition Bl mean; blank if no eligible values.
+data/per_condition.csv,S0_count,integer,count,Number of manually annotated S0 frames in the condition.
+data/per_condition.csv,S0_fraction,number,1,S0_count/n_frames; all six state fractions sum to one.
+data/per_condition.csv,S1_count,integer,count,Number of manually annotated S1 frames in the condition.
+data/per_condition.csv,S1_fraction,number,1,S1_count/n_frames; all six state fractions sum to one.
+data/per_condition.csv,S2_count,integer,count,Number of manually annotated S2 frames in the condition.
+data/per_condition.csv,S2_fraction,number,1,S2_count/n_frames; all six state fractions sum to one.
+data/per_condition.csv,S3_count,integer,count,Number of manually annotated S3 frames in the condition.
+data/per_condition.csv,S3_fraction,number,1,S3_count/n_frames; all six state fractions sum to one.
+data/per_condition.csv,S4_count,integer,count,Number of manually annotated S4 frames in the condition.
+data/per_condition.csv,S4_fraction,number,1,S4_count/n_frames; all six state fractions sum to one.
+data/per_condition.csv,S5_count,integer,count,Number of manually annotated S5 frames in the condition.
+data/per_condition.csv,S5_fraction,number,1,S5_count/n_frames; all six state fractions sum to one.
+data/per_condition.csv,a_mean,number,1,Arithmetic mean of the count-derived a feature over all frames.
+data/per_condition.csv,a_sd,number,1,Sample standard deviation (ddof=1) of count-derived a; not standard error.
+data/per_condition.csv,ell_um_mean,number,um,Arithmetic mean of the count-derived ell_um feature over all frames.
+data/per_condition.csv,ell_um_sd,number,um,Sample standard deviation (ddof=1) of count-derived ell_um; not standard error.
+data/per_condition.csv,ns_mean,number,count,Arithmetic mean of the count-derived ns feature over all frames.
+data/per_condition.csv,ns_sd,number,count,Sample standard deviation (ddof=1) of count-derived ns; not standard error.
+data/per_condition.csv,nc_mean,number,count,Arithmetic mean of the count-derived nc feature over all frames.
+data/per_condition.csv,nc_sd,number,count,Sample standard deviation (ddof=1) of count-derived nc; not standard error.
+data/transmittance_recovered.csv,panel,string,1,"Original Fig. 3 panel a, b, or c; a varies energy and b/c vary path length."
+data/transmittance_recovered.csv,concentration_molL,number,mol/L,"Exact condition-level dye concentration, 10^(-folder exponent)."
+data/transmittance_recovered.csv,energy_mJ,number,mJ,"Calibrated whole-beam incident pulse energy, not absorbed heat."
+data/transmittance_recovered.csv,path_length_mm,number,mm,Cuvette optical path length corresponding to each recovered marker.
+data/transmittance_recovered.csv,transmittance,number,1,Energy transmittance recovered from vector-marker coordinates; rounded to five decimals.
+data/transmittance_recovered.csv,source_vector_instruction,integer,1,Archived drawing-instruction index locating the recovered marker.
+data/transmittance_recovered.csv,provenance,string,1,"Explicit digitized-vector provenance, not an instrument raw-data claim."
+data/thermal_reference_curves.csv,concentration_molL,number,mol/L,"Exact condition-level dye concentration, 10^(-folder exponent)."
+data/thermal_reference_curves.csv,energy_boiling_peak_mJ,number,mJ,Constant-property model energy for peak temperature reaching the normal-boiling reference.
+data/thermal_reference_curves.csv,energy_highT_peak_mJ,number,mJ,"Model energy for peak temperature reaching the stipulated 190 deg C reference, not a spinodal."
+data/thermal_reference_curves.csv,energy_boiling_p99_mJ,number,mJ,Model energy for the area-99th-percentile temperature reaching the boiling reference.
+data/thermal_reference_curves.csv,energy_highT_p99_mJ,number,mJ,Model energy for the area-99th-percentile temperature reaching 190 deg C.
+examples/representatives.csv,state_label,string,1,"Manually annotated image state S0, S1, S2, S3, S4, or S5."
+examples/representatives.csv,condition_id,string,1,Original concentration/voltage folder code; join with frame_id.
+examples/representatives.csv,frame_id,string,1,"Complete original filename, unique only within one condition."
+examples/representatives.csv,raw_path,string,1,Repository-relative path to the full original representative JPEG.
+examples/representatives.csv,image_sha256,string,1,SHA-256 of the original full JPEG file for exact identity checks.
+examples/representatives.csv,width_px,integer,px,"Full original JPEG width, not the figure crop width."
+examples/representatives.csv,height_px,integer,px,"Full original JPEG height, not the figure crop height."
+examples/representatives.csv,selection,string,1,The representative was already selected for manuscript Fig. 7; no random sampling claim.
+metadata/upstream_checksums.csv,source_relative_to_model,string,1,"Owning V38 source file, relative to the manuscript model directory."
+metadata/upstream_checksums.csv,sha256,string,1,Hash of that unchanged upstream source file.

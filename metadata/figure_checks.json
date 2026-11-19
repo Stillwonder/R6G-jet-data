@@ -1,0 +1,62 @@
+{
+  "figure_count": 4,
+  "all_panels_visually_reviewed": true,
+  "records": [
+    {
+      "figure": "fig03_transmittance_recovered",
+      "alignment_verdict": "PASS",
+      "PDF_minimum_text_run_pt": 7.7,
+      "glyphs_below_5_pt": 0,
+      "raw_collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "review_disposition": "Automatic rendered collision check passed.",
+      "automatic_collision_pass_claimed": true
+    },
+    {
+      "figure": "fig07_states",
+      "alignment_verdict": "PASS",
+      "PDF_minimum_text_run_pt": 11.0,
+      "glyphs_below_5_pt": 0,
+      "raw_collision_summary": {
+        "fail": 1,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 1
+      },
+      "review_disposition": "The original scale bar meets the loose 1 mm text bounding box; visible glyphs remain legible. Same approved composition as the manuscript.",
+      "automatic_collision_pass_claimed": false
+    },
+    {
+      "figure": "fig08_state_map",
+      "alignment_verdict": "PASS",
+      "PDF_minimum_text_run_pt": 7.0,
+      "glyphs_below_5_pt": 0,
+      "raw_collision_summary": {
+        "fail": 1,
+        "warn": 0,
+        "contained_fill_overlays": 0,
+        "contained_image_overlays": 0
+      },
+      "review_disposition": "The generic auditor counts an extrapolated guide-path outside the left plot clipping rectangle near colorbar tick 1; this clipped path is absent in the rendered tick region.",
+      "automatic_collision_pass_claimed": false
+    },
+    {
+      "figure": "fig09_pca_bias",
+      "alignment_verdict": "PASS",
+      "PDF_minimum_text_run_pt": 7.0,
+      "glyphs_below_5_pt": 0,
+      "raw_collision_summary": {
+        "fail": 0,
+        "warn": 0,
+        "contained_fill_overlays": 4,
+        "contained_image_overlays": 0
+      },
+      "review_disposition": "Automatic rendered collision check passed.",
+      "automatic_collision_pass_claimed": true
+    }
+  ]
+}

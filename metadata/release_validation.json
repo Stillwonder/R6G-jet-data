@@ -1,0 +1,21 @@
+{
+  "package_version": "1.0.0",
+  "assembled_date": "2026-11-17",
+  "all_3027_state_labels": "manual annotations",
+  "processed_frames": 3027,
+  "conditions": 32,
+  "original_example_JPEGs": 6,
+  "PC1_reprojection_max_abs_error": 0.0,
+  "all_32_condition_means_counts_and_published_CIs_exactly_reproduced": true,
+  "all_6_example_masks_and_features_reproduced": true,
+  "independent_extraction_and_all_5_scripts_passed": true,
+  "independent_figure_comparisons": 4,
+  "independent_figure_page_pixels_identical": true,
+  "independent_generated_statistic_tables_byte_identical": true,
+  "CSV_field_dictionary_entries": 97,
+  "CITATION_yaml_structure_checked": true,
+  "old_V38_files_preserved": true,
+  "original_frame_bytes_preserved": true,
+  "external_upload_or_publication_performed": false,
+  "scope": "Processed survey tables plus six original example frames, not the full raw or simulation archive."
+}

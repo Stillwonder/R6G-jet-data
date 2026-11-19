@@ -1,0 +1,7 @@
+state_label,condition_id,frame_id,raw_path,image_sha256,width_px,height_px,selection
+S0,e-3.5_770v,"s0,frame_35.jpg",examples/raw/S0.jpg,90d8fde0ba49b3eb80433773e24233734a3b0dad98588d093e4704966c6a6700,544,1768,Existing manually annotated manuscript Fig. 7 representative; not a new random sample.
+S1,e-2.5_775v,"s1,frame_73.jpg",examples/raw/S1.jpg,9e166081853846736ef5294d30f424f63cc829f4a7802054fe4a6a20b401c82d,544,1768,Existing manually annotated manuscript Fig. 7 representative; not a new random sample.
+S2,e-2.5_775v,"s2,frame_2.jpg",examples/raw/S2.jpg,cbf4380966310a0a80a02022f3edc7533b7319845ead502e6df63a6e514444f9,544,1768,Existing manually annotated manuscript Fig. 7 representative; not a new random sample.
+S3,e-4_810v,"s3,frame_24.jpg",examples/raw/S3.jpg,6ff8ebcd3249696cab30249179de5c0198a0c6fdbeedc608da34e7830d5e37b9,544,1768,Existing manually annotated manuscript Fig. 7 representative; not a new random sample.
+S4,e-2.5_785v,"s4,frame_3 (42).jpg",examples/raw/S4.jpg,fda45c4df9c870b28447370d157e453458def715279f78cd3795dc9334dbb66c,544,1768,Existing manually annotated manuscript Fig. 7 representative; not a new random sample.
+S5,e-2_810v,"s5,frame_10 (3).jpg",examples/raw/S5.jpg,1c709a68bd75b570284864be6616a7d30abc027d76a116169cec4842b69b0f95,544,1768,Existing manually annotated manuscript Fig. 7 representative; not a new random sample.

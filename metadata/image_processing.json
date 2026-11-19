@@ -1,0 +1,46 @@
+{
+  "um_per_px": 5.63847153682089,
+  "calibration_note": "Frozen calibration from the manuscript pipeline; no recalibration from the six examples.",
+  "crop_bottom_px": 100,
+  "top_rows_for_center_and_base": 260,
+  "base_dark_threshold": 105,
+  "base_width_clip_px": [
+    8,
+    80
+  ],
+  "base_width_fallback_px": 24,
+  "base_search_half_width_px": 90,
+  "ROI_half_width_px": 180,
+  "background_Gaussian_blur_sigma_px": 18,
+  "contrast_percentile": 97,
+  "threshold_clip_levels": [
+    30,
+    65
+  ],
+  "central_exclusion_half_band": "max(5,int(0.85*base_width))",
+  "valid_run_distance_px": "max(20,2*base_width)",
+  "active_axial_row_pixels": "max(3,int(0.25*base_width))",
+  "minimum_axial_run_rows": 2,
+  "component_stride": 4,
+  "component_connectivity": 4,
+  "minimum_component_sampled_pixels": 2,
+  "Ba_and_Bl_eligibility": "exterior area > 0; zero masks have blank Ba and Bl",
+  "mask_orientation": "left = incident side (-y); right = transmitted side (+y)",
+  "state_labels": "All 3027 S0-S5 state labels are manual annotations.",
+  "bootstrap_resamples": 2000,
+  "bootstrap_seed": 20261115,
+  "bootstrap_rng": "NumPy default_rng / PCG64",
+  "bootstrap_quantiles": [
+    0.025,
+    0.975
+  ],
+  "bootstrap_order": "condition_order, then S, PC1, Ba, Bl; frames sorted by row_index",
+  "bootstrap_unit": "whole frame within one condition",
+  "plot_Ba_minimum_active_frames": 10,
+  "representative_plot_crop_xyxy_px": [
+    55,
+    360,
+    480,
+    1320
+  ]
+}

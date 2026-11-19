@@ -1,0 +1,75 @@
+{
+  "sample_count": 3027,
+  "condition_count": 32,
+  "feature_columns": [
+    "a_PCA_input",
+    "ell_um_PCA_input",
+    "ns",
+    "nc"
+  ],
+  "upstream_feature_names": [
+    "ejecta_area_fraction",
+    "jet_lateral_extent_um_proxy",
+    "visible_jet_segment_count",
+    "visible_ejecta_component_count_proxy"
+  ],
+  "transform": "z_j = (ln(1+x_j) - log_mean_j) / log_sample_sd_j; PC1 = z dot loadings",
+  "numerical_units_before_log": [
+    "dimensionless area fraction",
+    "ell divided by 1 um",
+    "segment count",
+    "component count"
+  ],
+  "log_base": "natural",
+  "sd_ddof": 1,
+  "covariance_ddof": 1,
+  "log_mean": [
+    0.0007113498108700558,
+    4.88696345661767,
+    0.5120806398341343,
+    0.6374738452374731
+  ],
+  "log_sample_sd": [
+    0.0016585250878401428,
+    0.6021912197972702,
+    0.928930979363158,
+    1.0682427671450494
+  ],
+  "loadings": [
+    0.497316354414317,
+    0.4464376828935409,
+    0.5237700104329676,
+    0.5282374608977948
+  ],
+  "explained_variance_fraction": 0.8582476499250866,
+  "covariance": [
+    [
+      0.9999999999999382,
+      0.6274417863265027,
+      0.8858246465385845,
+      0.8819593615680568
+    ],
+    [
+      0.6274417863265027,
+      1.0000000000000109,
+      0.7165956867196133,
+      0.7549829825807107
+    ],
+    [
+      0.8858246465385845,
+      0.7165956867196133,
+      0.9999999999999323,
+      0.9728145919402201
+    ],
+    [
+      0.8819593615680568,
+      0.7549829825807107,
+      0.9728145919402201,
+      0.9999999999999751
+    ]
+  ],
+  "pc1_sign": "positive loading on all four features",
+  "refit_in_bootstrap": false,
+  "labels_used_in_PCA_fit": false,
+  "precision_note": "The published PCA used archived CSV values with some nonuniform decimal/scientific-notation rounding. a and ell_um are count-derived full-precision features; *_PCA_input preserve exactly the frozen projection inputs."
+}
