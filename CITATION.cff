@@ -23,9 +23,8 @@ abstract: >-
   Processed fixed-delay survey statistics for 3027 frames and 32 conditions,
   frozen PCA parameters, reproducible analysis and plotting scripts, and six
   original representative frames. Code is separately licensed under MIT.
-  This local preparation corresponds to manuscript V38; a public repository
-  DOI and a paper DOI have not yet been assigned in this package.
-preferred-citation:
+  Processed fixed-delay survey statistics, PCA parameters, and scripts. Archived at Zenodo with DOI 10.5281/zenodo.24359532. The corresponding paper DOI is not yet assigned and will be updated after publication.
+  preferred-citation:
   type: unpublished
   title: "Cavitation and bilateral ejection from transversely irradiated liquid microjets"
   year: 2026
